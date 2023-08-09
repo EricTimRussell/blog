@@ -6,24 +6,18 @@
 <body>
 
     <?php
-
-    $name = "Dark Matter";
-    $read = true;
-
-
-    if ($read) {
-        $message = "You have read $name";
-    } else {
-        $message = "You have not read $name";
-    }
+    $books = [
+        "LOTR",
+        "The Hobbit",
+        "The Similarion"
+    ];
     ?>
 
     <h1>
-        <!-- Long hand way to display html -->
-        <!-- <?php echo $message; ?> -->
-
-        <!-- Short hand way to display html -->
-        <?= $message ?>
+        <!-- short hand foreach loop -->
+        <?php foreach ($books as $book) : ?>
+            <li><?= $book ?></li>
+        <?php endforeach; ?>
     </h1>
 
 
