@@ -7,16 +7,28 @@
 
     <?php
     $books = [
-        "LOTR",
-        "The Hobbit",
-        "The Similarion"
+        [
+            'name' => 'LOTR',
+            'author' => 'Tolkein',
+            'purchaseUrl' => 'http://example.com'
+        ],
+        [
+            'name' => 'The Hobbit',
+            'author' => 'Tolkein',
+            'purchaseUrl' => 'http://example.com'
+        ]
     ];
     ?>
 
     <h1>
         <!-- short hand foreach loop -->
         <?php foreach ($books as $book) : ?>
-            <li><?= $book ?></li>
+            <!-- loop over using key value pairs -->
+            <li>
+                <a href="<?= $book['purchaseUrl'] ?>">
+                    <?= $book['name']; ?>
+                </a>
+            </li>
         <?php endforeach; ?>
     </h1>
 
